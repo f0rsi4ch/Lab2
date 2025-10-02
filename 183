@@ -1,0 +1,19 @@
+day = int(input("Введіть день: "))
+month = int(input("Введіть місяць: "))
+year = int(input("Введіть рік: "))
+
+days_in_month = [31, 28, 31, 30, 31, 30, 
+                 31, 31, 30, 31, 30, 31]
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    days_in_month[1] = 29
+
+day -= 1
+if day == 0:
+    month -= 1
+    if month == 0:
+        month = 12
+        year -= 1
+    day = days_in_month[month - 1]
+
+print(f"{day:02d}.{month:02d}.{year}")
