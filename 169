@@ -1,0 +1,7 @@
+number = input("Введіть трицифрове число: ")
+digit = input("Введіть одну цифру: ")
+
+if digit in number:
+    print(True)
+else:
+    print(False)
