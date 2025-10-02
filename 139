@@ -1,0 +1,6 @@
+x = float(input("Введіть число: "))
+
+if -5 < x < 3:
+    print("True")
+else:
+    print("False")
